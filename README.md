@@ -59,7 +59,11 @@ Die Seite soll wie folgt modifiziert werden:
 - Alle Angestellten die in den nächsten drei Tagen Geburtstag feiern in der Tabelle highlighten.
 - Den nächsten Geburtstag in einem Satz über der Tabelle promoten. Bsp.:
     *"[Vorname] [Nachname] feiert seinen Geburtstag in [X] Tagen."*
-    
+
+
+#### Sonstiges
+Die zusätzliche Verwendung eines Frontend-Frameworks (bspw. Bootstrap // http://getbootstrap.com/) ist gern gesehen.
+
 #### Tips
 - Bei Änderungen an einer Java-Klassenstruktur muss die App neu gestartet werden.
 - Bei Änderungen innerhalb einer Java-Methode (bspw. im Controller) reicht ein Projekt-Rebuild aus.
