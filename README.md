@@ -19,7 +19,7 @@ Es soll eine Web-Applikation entwickelt werden, die basierend auf gegebenen Date
 
 #### Folgendes ist bereits vorhanden:
 
-Bereitgestellt wird eine Grund-Applikation in die die fehlenden Bestandteile implementiert werden sollen.
+Bereitgestellt wird eine Grund-Applikation in die die fehlenden Bestandteile implementiert werden sollen. Die folgenden Bereiche sind bereits implementiert.
 
 ##### Backend:
 - Fertig konfigurierte Spring Boot Application
@@ -41,7 +41,7 @@ Bereitgestellt wird eine Grund-Applikation in die die fehlenden Bestandteile imp
 
 #### Backend
 
-Im ``BirthdayController`` steht eine Liste von Mitarbeitern bereit. Diese soll so gefiltert werden, dass sie nurnoch Mitarbeiter enthält, die in den nächsten *14 Tagen* ihren Geburtstag feiern.
+Im ``BirthdayController`` steht eine Liste von Mitarbeitern bereit. Diese soll so gefiltert werden, dass sie nur noch Mitarbeiter enthält, die in den nächsten *14 Tagen* ihren Geburtstag feiern.
 
 Es sollen nur die Klassen ``BirthdayController`` und ``Employee`` (optional) bearbeitet werden. 
 
