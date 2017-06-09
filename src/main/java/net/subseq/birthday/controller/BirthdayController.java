@@ -1,7 +1,7 @@
 package net.subseq.birthday.controller;
 
-import net.subseq.birthday.Data.DataGenerator;
-import net.subseq.birthday.Data.Employee;
+import net.subseq.birthday.data.DataGenerator;
+import net.subseq.birthday.data.Employee;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;

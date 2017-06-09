@@ -1,4 +1,4 @@
-package net.subseq.birthday.Data;
+package net.subseq.birthday.data;
 
 import io.codearte.jfairy.Fairy;
 import io.codearte.jfairy.producer.person.Person;

@@ -1,4 +1,4 @@
-package net.subseq.birthday.Data;
+package net.subseq.birthday.data;
 
 
 import org.joda.time.LocalDate;
