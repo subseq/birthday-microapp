@@ -23,6 +23,46 @@
           "[Vorname], [Nachname] feiert seinen Geburtstag in [X] Tagen.
 -->
 
+
+
+<h1>Kommende Geburtstage</h1>
+
+
+<#list filteredEmployees[0..*1] as employee>
+        <p><span>${employee.firstname} ${employee.lastname} 
+        <#if employee.daysTillBirthday == 0> feiert heute Geburtstag!
+        <#elseif employee.daysTillBirthday == 1> feiert in ${employee.daysTillBirthday} Tag Geburtstag!
+        <#else> feiert in ${employee.daysTillBirthday} Tagen Geburtstag!</span></p></#if>
+</#list>
+
+<table class="employees">
+      
+    <#list filteredEmployees>
+	    <tr>
+			  <th>Nachname</th>
+			  <th>Vorname</th>
+			  <th>Geburtstag</th>
+	    </tr>  
+	    <#items as employee>
+	    	<tr <#if employee.hasBirthdayWithIn3Days> class="in3days"</#if>>
+			    <td>${employee.lastname}</td>
+			    <td>${employee.firstname}</td>
+			    <td>${employee.birthday}</td>
+	  		</tr>
+	    </#items>
+      
+     <#else><p>Es gibt keinen Geburtstag in den nächsten 14 Tagen!</p>
+    </#list>
+  </table>
+
+
+<#-- 
+<ul>
+    <#list filteredEmployees as employee>
+        <li>${employee.lastname}, ${employee.firstname} (${employee.birthday})</li>
+    </#list>
+</ul>
+
 <h1>Alle Mitarbeiter</h1>
 
 <ul>
@@ -30,6 +70,6 @@
         <li>${employee.lastname}, ${employee.firstname} (${employee.birthday})</li>
     </#list>
 </ul>
-
+-->
 </body>
 </html>

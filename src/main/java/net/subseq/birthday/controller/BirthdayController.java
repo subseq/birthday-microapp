@@ -6,11 +6,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Controller
 public class BirthdayController {
-
+	
     @RequestMapping(value = "/")
     public String index(Model model) {
 
@@ -33,10 +36,25 @@ public class BirthdayController {
         /*
             Insert your code HERE
          */
-
-
+        List<Employee> filteredEmployees = employees.stream()
+                .filter(new java.util.function.Predicate<Employee>() {
+                    @Override
+                    public boolean test(Employee e) {
+                        return e.hasBirthDayInXDays(e.getBirthday(), 14);
+                    }
+                }).collect(Collectors.toList());
+        Collections.sort(filteredEmployees, new Comparator<Employee>() {
+        	public int compare (Employee e1, Employee e2) {
+        		return e1.getDaysTillBirthday() - e2.getDaysTillBirthday();
+        	}
+        });
+        
+        
         // Liste zum 'Model' hinzufügen, um im Template darauf zuzugreifen
         model.addAttribute("employees", employees);
+        
+        model.addAttribute("filteredEmployees", filteredEmployees);
+
 
         // Template: templates/index.ftl
         return "index";
