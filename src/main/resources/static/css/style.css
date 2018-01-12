@@ -1,4 +1,57 @@
 html, body {
-    background: #efefef;
-    font-family: Arial, Helvetica;
+    background: #fbe9e7;
+    font-family: Roboto, Arial, Helvetica;
+    margin: 0;
+    font-size: 18px;
+    min-width: 700px;
+    
+}
+
+h1 {
+	font-size: 2.5em;
+	padding: 20px 0 20px 0;
+	font-weight: bold;
+	margin-left: 45px;
+}
+
+p {
+	font-size: 2em;
+	text-align: center;
+	padding: 0 0 20px 0;
+	font-style: italic;
+	color: #ff6e40;
+	
+}
+
+span {
+	background: #ff6340;
+	color: #000000;
+	padding: 10px 25px;	
+	border-radius: 5px;
+}
+
+table {
+	padding: 20px 50px 200px 50px;
+	display: block;
+	background: #f1f8e9;
+	border-spacing: 0;
+}
+
+tbody {
+	background: #ffffff;
+	margin: 20px;
+}
+
+tr th{
+	padding: 10px 20px 10px 20px;
+	font-size: 20px;
+}
+tr td{
+	padding: 10px 20px 10px 20px;
+}
+
+tr.in3days {
+	font-style: italic;
+	color: #c53d13;
+	font-weight: bold;
 }
